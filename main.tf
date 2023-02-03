@@ -1,3 +1,12 @@
+locals {
+  bucket_name = "yuyatinnefeld"
+  env = "dev"
+  region = "europe-west1"
+  zone = "europe-west1-b"
+  domain = ".com"
+}
+
+
 terraform {
   required_providers {
     google = {
@@ -8,17 +17,17 @@ terraform {
 }
 
 provider "google" {
-  project = "hello-yuya-project"
-  region  = "europe-west1"
-  zone    = "europe-west1-b"
+  project = "yuyatinnefeld-dev"
+  region  = local.region
+  zone    = local.zone
 }
 
 module "static_website_cloud_storage" {
   source      = ".//terraform-google-cloud-storage-static-site"
-  bucket_name = "terraform-image-static-website-example"
-  location    = "EU"
-  env         = "dev"
-  domain      = "com"
+  bucket_name = local.bucket_name
+  location    = local.region
+  env         = local.env
+  domain      = local.domain
 }
 
 

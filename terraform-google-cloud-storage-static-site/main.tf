@@ -1,8 +1,8 @@
 resource "google_storage_bucket" "static-site" {
-  name          = "{${var.bucket_name}-${var.env}}.${var.domain}}"
+  name          = "${var.bucket_name}${var.domain}"
   location      = var.location
-  force_destroy = true
 
+  force_destroy = true
   uniform_bucket_level_access = true
 
   website {
@@ -16,5 +16,7 @@ resource "google_storage_bucket" "static-site" {
     response_header = ["*"]
     max_age_seconds = 3600
   }
-  
+  labels = {
+    "environment": var.env
+  }
 }
