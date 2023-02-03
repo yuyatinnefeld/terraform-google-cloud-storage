@@ -1,0 +1,11 @@
+# Terraform Simple Public Module
+
+## Steps
+- 1. create your module
+- 2. login registry.terraform.io
+- 3. create a tag with `git tag 0.0.1` then `git push --tags`
+- 4. publish > module> select your custom module
+
+## Example
+- module name: terraform-google-cloud-storage-static-site
+- url: https://registry.terraform.io/modules/yuyatinnefeld/cloud-storage
