@@ -1,5 +1,9 @@
-output "bucket_name" {
-  value = local.bucket_name
+output "organization_name" {
+  value = local.organization_name
+}
+
+output "bucket-name" {
+  value = "${local.organization_name}${local.domain}"
 }
 
 output "environment" {
