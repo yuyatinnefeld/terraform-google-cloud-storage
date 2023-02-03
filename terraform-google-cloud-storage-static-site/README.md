@@ -1,6 +1,6 @@
 # Terraform Module to provision a Google Cloud Storage for the static website
 
-## adjust the local variables for your GCP project
+### adjust the local variables for your GCP project
 ```hcl
 locals {
   organization_name = "yuyatinnefeld"
@@ -11,6 +11,7 @@ locals {
   domain = ".com"
 }
 ```
+### use these local variables in main.tf
 
 ```hcl
 terraform {
