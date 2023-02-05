@@ -1,3 +1,9 @@
+locals {
+  project_id = "yuyatinnefeld-dev"
+  zone = "europe-west1-b"
+}
+
+
 terraform {
   required_providers {
     google = {
@@ -8,9 +14,8 @@ terraform {
 }
 
 provider "google" {
-  project = var.project_id
-  region  = var.region
-  zone    = var.zone
+  project = local.project_id
+  zone    = local.zone
 }
 
 module "static_website_cloud_storage" {
