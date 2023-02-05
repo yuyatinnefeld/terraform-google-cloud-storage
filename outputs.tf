@@ -1,11 +1,11 @@
 output "organization_name" {
-  value = local.organization_name
+  value = var.organization_name
 }
 
 output "bucket-name" {
-  value = "${local.organization_name}${local.domain}"
+  value = "${var.organization_name}${var.domain}"
 }
 
 output "environment" {
-  value = local.env
+  value = var.env
 }
