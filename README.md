@@ -25,10 +25,11 @@ provider "google" {
 }
 
 module "static_website_cloud_storage" {
-  source      = ".//terraform-google-cloud-storage-static-site"
-  bucket_name = var.organization_name
-  location    = var.region
-  env         = var.env
-  domain      = var.domain
+  source            = "yuyatinnefeld/cloud-storage/google"
+  organization_name = var.organization_name
+  region            = var.region
+  env               = var.env
+  domain            = var.domain
 }
+
 ```
