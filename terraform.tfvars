@@ -1,6 +1,4 @@
 organization_name = "yuyatinnefeld"
-project_id = "yuyatinnefeld-dev"
 env = "dev"
 region = "europe-west1"
-zone = "europe-west1-b"
 domain = ".com"
