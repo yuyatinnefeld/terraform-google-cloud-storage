@@ -7,7 +7,7 @@ locals {
 terraform {
   required_providers {
     google = {
-      source = "hashicorp.com/yuyatinnefeld/google"
+      source = "hashicorp.com/google"
       version = "~> 4.0.0"
     }
   }
