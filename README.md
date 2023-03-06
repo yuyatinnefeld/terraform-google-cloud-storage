@@ -31,5 +31,7 @@ module "static_website_cloud_storage" {
   env               = var.env
   domain            = var.domain
 }
-
 ```
+
+## [Terraform Registry](https://registry.terraform.io/modules/yuyatinnefeld/cloud-storage/google/latest)
+
